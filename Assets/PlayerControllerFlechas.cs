@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerControllerFlechas : MonoBehaviour
 {
-    public float rotationSpeed;
-    public float movementSpeed;
+    float rotationSpeed = 4;
+    float movementSpeed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {

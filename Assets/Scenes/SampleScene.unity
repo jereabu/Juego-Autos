@@ -198,7 +198,7 @@ Transform:
   m_GameObject: {fileID: 28154212}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.62700003, y: 0, z: 2.8200006}
-  m_LocalScale: {x: 5, y: 1, z: 0.30000007}
+  m_LocalScale: {x: 10, y: 1, z: 0.30000007}
   m_Children: []
   m_Father: {fileID: 520107323}
   m_RootOrder: 2
@@ -237,8 +237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8b22f628cc3f654c9ce2ca23a0ba5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 4
-  movementSpeed: 0.1
 --- !u!65 &110085839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -352,6 +350,9 @@ GameObject:
   - component: {fileID: 152170608}
   - component: {fileID: 152170607}
   - component: {fileID: 152170606}
+  - component: {fileID: 152170611}
+  - component: {fileID: 152170610}
+  - component: {fileID: 152170609}
   m_Layer: 0
   m_Name: ArmaWASD
   m_TagString: Untagged
@@ -367,7 +368,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152170604}
   m_LocalRotation: {x: -0, y: -1, z: -0, w: 0}
-  m_LocalPosition: {x: -0.007000351, y: -0.225, z: 0.803}
+  m_LocalPosition: {x: -0.007000351, y: -0.215, z: 0.803}
   m_LocalScale: {x: 0.9, y: 0.5, z: 0.6}
   m_Children: []
   m_Father: {fileID: 110085842}
@@ -431,6 +432,47 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 152170604}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!54 &152170609
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152170604}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &152170610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152170604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14822658c9a8e5e48a494633e5f1dbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &152170611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 152170604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77c1addf0e984a46bbb70649b8792df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1156165627}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -860,8 +902,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0, y: 10.419177, z: 0.0000012420626}
+  m_LocalRotation: {x: 0.6119237, y: -0.0040353243, z: 0.0031212121, w: 0.7909004}
+  m_LocalPosition: {x: -0.5877182, y: 11.1026, z: -3.9255908}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -953,7 +995,7 @@ Transform:
   m_GameObject: {fileID: 682313411}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -0.61100024, y: 0, z: 2.8200004}
-  m_LocalScale: {x: 5, y: 1, z: 0.30000007}
+  m_LocalScale: {x: 10, y: 1, z: 0.30000007}
   m_Children: []
   m_Father: {fileID: 520107323}
   m_RootOrder: 1
@@ -1069,8 +1111,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19b21869f5412974ca456ef155deef9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 4
-  movementSpeed: 0.1
 --- !u!65 &1156165629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1258,7 +1298,7 @@ Transform:
   m_GameObject: {fileID: 1263096794}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 5.640001}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 520107323}
   m_RootOrder: 0
@@ -1342,6 +1382,8 @@ GameObject:
   - component: {fileID: 1720170957}
   - component: {fileID: 1720170956}
   - component: {fileID: 1720170959}
+  - component: {fileID: 1720170961}
+  - component: {fileID: 1720170960}
   m_Layer: 0
   m_Name: ArmaFlechas
   m_TagString: Untagged
@@ -1434,6 +1476,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 110085837}
+--- !u!54 &1720170960
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720170954}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!114 &1720170961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1720170954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14822658c9a8e5e48a494633e5f1dbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1723512299
 GameObject:
   m_ObjectHideFlags: 0
