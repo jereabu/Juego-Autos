@@ -9,13 +9,13 @@ public class ActualizarVidaFlechas : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        vidaFlechas = 100;       
+        vidaFlechas = 10;       
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (vidaFlechas < 10)
+        if (vidaFlechas < 1)
         {
             Destroy(player);
         }
@@ -23,9 +23,9 @@ public class ActualizarVidaFlechas : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ArmaWASD")
+        if (col.gameObject.name == "JugadorFlechas")
         {
-            vidaFlechas -= 10;
+            vidaFlechas -= 1;
             Debug.Log("Le diste");
         }
     }

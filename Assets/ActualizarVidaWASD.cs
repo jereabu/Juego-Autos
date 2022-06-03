@@ -23,7 +23,8 @@ public class ActualizarVidaWASD : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "ArmaFlechas")
+         //Debug.Log("Le diste a " + col.gameObject.name);
+        if (col.gameObject.name == "JugadorWASD")
         {
             vidaWASD -= 10;
             Debug.Log("Le diste");
