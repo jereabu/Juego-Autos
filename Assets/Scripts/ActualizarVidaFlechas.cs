@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class ActualizarVidaFlechas : MonoBehaviour
 {
+    public AudioClip crash;
     public GameObject player;
     public Text ganador;
     public GameObject cartel;
     public GameObject timer;
-    int vidaFlechas;
+    public Text vida;
+    public int vidaFlechas;
+    AudioSource fuenteAudio;
     // Start is called before the first frame update
     void Start()
     {
-        vidaFlechas = 10;       
+        vidaFlechas = 10;  
+        fuenteAudio = GetComponent<AudioSource>();     
     }
 
     // Update is called once per frame
@@ -34,6 +38,9 @@ public class ActualizarVidaFlechas : MonoBehaviour
         {
             vidaFlechas--;
             Debug.Log("Le diste");
+            fuenteAudio.clip = crash;
+            fuenteAudio.Play();
+            vida.text = "Azul: " + vidaFlechas * 10;
         }
     }
 }

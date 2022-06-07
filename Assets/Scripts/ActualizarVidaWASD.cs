@@ -5,15 +5,19 @@ using UnityEngine.UI;
 
 public class ActualizarVidaWASD : MonoBehaviour
 {
+    public AudioClip crash;
     public GameObject player;
     public Text ganador;
     public GameObject cartel;
     public GameObject timer;
-    int vidaWASD;
+    public Text vida;
+    public int vidaWASD;
+    AudioSource fuenteAudio;
     // Start is called before the first frame update
     void Start()
     {
         vidaWASD = 10;       
+        fuenteAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -34,6 +38,9 @@ public class ActualizarVidaWASD : MonoBehaviour
         {
             vidaWASD--;
             Debug.Log("Le diste");
+            fuenteAudio.clip = crash;
+            fuenteAudio.Play();
+            vida.text = "Rojo: " + vidaWASD * 10;
         }
     }
 }

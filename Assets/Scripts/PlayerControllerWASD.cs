@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerControllerWASD : MonoBehaviour
 {
-    float rotationSpeed = 4;
-    float movementSpeed = 0.1f;
+    float rotationSpeed = 5;
+    float movementSpeed = 0.2f;
     // Start is called before the first frame update
     void Start()
     {
