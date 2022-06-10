@@ -10,6 +10,7 @@ public class ContadorTiempo : MonoBehaviour
     public GameObject Flechas;
     public Text ganador;
     public GameObject cartel;
+    public GameObject corona;
     int VidaWASD;
     int VidaFlechas;
     // Start is called before the first frame update
@@ -33,12 +34,16 @@ public class ContadorTiempo : MonoBehaviour
             {
                 Destroy(Flechas);
                 ganador.text = "Ganador: Rojo";
+                corona.transform.position = new Vector3(WASD.transform.position.x, 1.3f, WASD.transform.position.z);
+                Instantiate(corona);
             }
 
             else if (VidaFlechas > VidaWASD)
             {
                 Destroy(WASD);
                 ganador.text = "Ganador: Azul";
+                corona.transform.position = new Vector3(Flechas.transform.position.x, 1.3f, Flechas.transform.position.z);
+                Instantiate(corona);
             }
 
             else

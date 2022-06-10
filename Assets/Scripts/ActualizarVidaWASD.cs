@@ -7,12 +7,15 @@ public class ActualizarVidaWASD : MonoBehaviour
 {
     public AudioClip crash;
     public GameObject player;
+    public GameObject Flechas;
     public Text ganador;
     public GameObject cartel;
     public GameObject timer;
+    public GameObject corona;
     public Text vida;
     public int vidaWASD;
     AudioSource fuenteAudio;
+    int i = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +32,11 @@ public class ActualizarVidaWASD : MonoBehaviour
             cartel.SetActive(true);
             ganador.text = "Ganador: Azul";
             timer.SetActive(false);
+            corona.transform.position = new Vector3(Flechas.transform.position.x, 1.3f, Flechas.transform.position.z);
+            while (i < 5) {
+                i++;
+                Instantiate(corona);
+            }
         }
     }
 
