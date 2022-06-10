@@ -1787,7 +1787,7 @@ GameObject:
   - component: {fileID: 1317290835}
   - component: {fileID: 1317290834}
   m_Layer: 5
-  m_Name: Vida Azul
+  m_Name: Vida Rojo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
