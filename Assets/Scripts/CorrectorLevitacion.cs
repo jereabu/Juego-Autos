@@ -13,19 +13,8 @@ public class CorrectorLevitacion : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.y != 0.5f)
-        {
-            transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
-        }
-
-        if (transform.eulerAngles.x != 0)
-        {
-            transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
-        }
-
-        if (transform.eulerAngles.z != 0)
-        {
-            transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);
-        }
+        transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+        transform.eulerAngles = new Vector3(0, transform.eulerAngles.y, transform.eulerAngles.z);
+        transform.eulerAngles = new Vector3(transform.eulerAngles.x, transform.eulerAngles.y, 0);        
     }
 }
