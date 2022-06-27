@@ -33,6 +33,8 @@ public class ActualizarVidaWASD : MonoBehaviour
             ganador.text = "Ganador: Azul";
             timer.SetActive(false);
             corona.transform.position = new Vector3(Flechas.transform.position.x, 1.3f, Flechas.transform.position.z);
+            corona.transform.localScale = new Vector3(0.2140924f, 0.2140924f, 0.2140924f);
+
             while (i < 5) {
                 i++;
                 Instantiate(corona);
@@ -42,7 +44,7 @@ public class ActualizarVidaWASD : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "JugadorWASD")
+        if (col.gameObject.name == "AutoWASD")
         {
             vidaWASD--;
             Debug.Log("Le diste");

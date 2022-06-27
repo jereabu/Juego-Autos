@@ -1,31 +1,25 @@
 fileFormatVersion: 2
-guid: 33709659856389f40be4bf1ef3607e98
+guid: 6384efe6da90c9448a3f442da741b7e1
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     400000: //RootNode
-    2100000: Color
-    2100002: BrilloRuedas
+    2100000: Paleta1
     2300000: //RootNode
     3300000: //RootNode
-    4300000: Cube
+    4300000: Cylinder
   externalObjects:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
-      name: BrilloRuedas
-    second: {fileID: 2100000, guid: 7a461143c5f6344478e418ef6d733d84, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Color
-    second: {fileID: 2100000, guid: 2beb4cf918d51b1439410d1aa6379739, type: 2}
+      name: Paleta1
+    second: {fileID: 2100000, guid: 2f428b1d5851911438d9210e69ebab8e, type: 2}
   - first:
       type: UnityEngine:Texture2D
       assembly: UnityEngine.CoreModule
       name: 20cdf1e0746baa7fa7fadfe6de86e1f6
-    second: {fileID: 2800000, guid: 635144aa7ac1d6b4aa4a92953bc80202, type: 3}
+    second: {fileID: 2800000, guid: 02db6055f03940b4b9fb411d53bb7bd1, type: 3}
   materials:
     importMaterials: 1
     materialName: 0

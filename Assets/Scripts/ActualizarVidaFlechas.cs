@@ -33,6 +33,7 @@ public class ActualizarVidaFlechas : MonoBehaviour
             ganador.text = "Ganador: Rojo";
             timer.SetActive(false);
             corona.transform.position = new Vector3(WASD.transform.position.x, 1.3f, WASD.transform.position.z);
+            corona.transform.localScale = new Vector3(0.2140924f, 0.2140924f, 0.2140924f);
             while (i < 5)
             {
                 i++;
@@ -43,7 +44,7 @@ public class ActualizarVidaFlechas : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "JugadorFlechas")
+        if (col.gameObject.name == "AutoFlechas")
         {
             vidaFlechas--;
             Debug.Log("Le diste");
