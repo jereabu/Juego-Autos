@@ -44,7 +44,7 @@ public class ActualizarVidaWASD : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "AutoWASD")
+        if (col.gameObject.name == "JugadorWASD")
         {
             vidaWASD--;
             Debug.Log("Le diste");

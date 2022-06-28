@@ -44,7 +44,7 @@ public class ActualizarVidaFlechas : MonoBehaviour
 
     void OnCollisionEnter(Collision col)
     {
-        if (col.gameObject.name == "AutoFlechas")
+        if (col.gameObject.name == "JugadorFlechas")
         {
             vidaFlechas--;
             Debug.Log("Le diste");
